@@ -21,8 +21,26 @@ void PrintStringArray(string [] array)
 {
     for (int i = 0; i < array.Length; i++)
         Console.Write(array[i] + " ");
+    Console.WriteLine();
 }
+
+string [] CreateNewArray (string[]array)
+{
+    string [] newArray = new string [3];
+    int count = 0;
+    for (int i = 0; i<newArray.Length; i++)
+    {
+        newArray[i] = array[i = new Random().Next(0,8)];
+        count++;
+        if (count == new Random().Next(0,4))
+            break;
+    }
+    return newArray;
+}
+
 
 
 string [] array = { "Hello", "2", "world", "-)", "1234", "1567", "-2", "computer science" };
 PrintStringArray(array);
+string [] earray = CreateNewArray (array);
+PrintStringArray(earray);
