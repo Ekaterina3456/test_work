@@ -17,22 +17,24 @@
 */
 
 
-void PrintStringArray(string [] array)
+void PrintStringArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
         Console.Write(array[i] + " ");
     Console.WriteLine();
 }
 
-string [] CreateNewArray (string[]array)
+string[] CreateNewArray(string[] array)
 {
-    string [] newArray = new string [3];
+    int size = 3;
+    string[] newArray = new string[size];
     int count = 0;
-    for (int i = 0; i<newArray.Length; i++)
+    for (int i = 0; i < size; i++)
     {
-        newArray[i] = array[i = new Random().Next(0,8)];
+        int k = 0;
+        newArray[i] = array[k = new Random().Next(0,8)];
         count++;
-        if (count == new Random().Next(0,4))
+        if (count == new Random().Next(1, 4))
             break;
     }
     return newArray;
@@ -40,7 +42,8 @@ string [] CreateNewArray (string[]array)
 
 
 
-string [] array = { "Hello", "2", "world", "-)", "1234", "1567", "-2", "computer science" };
+
+string[] array = { "Hello", "2", "world", "-)", "1234", "1567", "-2", "computer science" };
 PrintStringArray(array);
-string [] earray = CreateNewArray (array);
+string[] earray = CreateNewArray(array);
 PrintStringArray(earray);
