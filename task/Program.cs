@@ -42,8 +42,9 @@ string[] CreateNewArray(string[] array)
 
 
 
-
+Console.WriteLine("имеется массив из строк: ");
 string[] array = { "Hello", "2", "world", "-)", "1234", "1567", "-2", "computer science" };
 PrintStringArray(array);
+Console.WriteLine("из которого был сгенирирован новый массив не превышающий трёх символов: ");
 string[] earray = CreateNewArray(array);
 PrintStringArray(earray);
