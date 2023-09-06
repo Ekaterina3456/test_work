@@ -20,22 +20,18 @@
 void PrintStringArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
-        Console.Write(array[i] + " ");
+        Console.Write(array[i] + ", ");
     Console.WriteLine();
 }
 
 string[] CreateNewArray(string[] array)
 {
-    int size = 3;
+    int size = new Random().Next(1, 4);
     string[] newArray = new string[size];
-    int count = 0;
     for (int i = 0; i < size; i++)
     {
         int k = 0;
         newArray[i] = array[k = new Random().Next(0,8)];
-        count++;
-        if (count == new Random().Next(1, 4))
-            break;
     }
     return newArray;
 }
